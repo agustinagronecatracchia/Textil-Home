@@ -5,7 +5,7 @@ export interface Product {
   name: string;
   price: number;
   image: string;
-  category: "fundas" | "cortinas";
+  category: "fundas" | "cortinas" | "sabanas";
 }
 
 export interface CartItem extends Product {

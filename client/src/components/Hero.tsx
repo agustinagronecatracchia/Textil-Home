@@ -50,20 +50,20 @@ export function Hero() {
             <span className="text-primary">con estilo</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-            Descubre nuestra colección de fundas para sillones y cortinas de la
-            más alta calidad. Diseños exclusivos para cada espacio de tu hogar.
+            Descubre nuestra colección de fundas para sillones, cortinas, sábanas 
+            y cubre acolchados de la más alta calidad.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild data-testid="button-ver-fundas">
-              <a href="#fundas">Ver Fundas</a>
+            <Button size="lg" asChild data-testid="button-ver-productos">
+              <a href="#inicio">Ver Productos</a>
             </Button>
             <Button
               size="lg"
               variant="outline"
               asChild
-              data-testid="button-ver-cortinas"
+              data-testid="button-sobre-nosotros"
             >
-              <a href="#cortinas">Ver Cortinas</a>
+              <a href="#sobre-nosotros">Sobre Nosotros</a>
             </Button>
           </div>
         </motion.div>
@@ -75,7 +75,7 @@ export function Hero() {
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
         >
           <a
-            href="#fundas"
+            href="#inicio"
             className="flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
           >
             <span className="text-sm">Explorar</span>

@@ -8,6 +8,12 @@ interface ProductCardProps {
   product: Product;
 }
 
+const categoryLabels = {
+  fundas: "Funda para Sillón",
+  cortinas: "Cortina",
+  sabanas: "Juego de Sábanas",
+};
+
 export function ProductCard({ product }: ProductCardProps) {
   const { addToCart } = useCart();
   const [added, setAdded] = useState(false);
@@ -39,9 +45,7 @@ export function ProductCard({ product }: ProductCardProps) {
           {product.name}
         </h3>
         <p className="text-muted-foreground text-sm mb-3">
-          {product.category === "fundas"
-            ? "Funda para Sillón"
-            : "Cortina"}
+          {categoryLabels[product.category]}
         </p>
         <div className="flex items-center justify-between">
           <span className="text-xl font-semibold text-primary">
@@ -51,9 +55,7 @@ export function ProductCard({ product }: ProductCardProps) {
             onClick={handleAddToCart}
             size="sm"
             className={`transition-all duration-300 ${
-              added
-                ? "bg-green-600 hover:bg-green-600"
-                : ""
+              added ? "bg-green-600 hover:bg-green-600" : ""
             }`}
             data-testid={`button-add-${product.id}`}
           >

@@ -8,14 +8,31 @@ export function Footer() {
           <div>
             <h3 className="text-display text-2xl mb-4">Mercería de Telas</h3>
             <p className="text-background/70 text-sm leading-relaxed">
-              Tu tienda de confianza para fundas de sillones y cortinas de la
-              mejor calidad. Transformamos hogares con elegancia y estilo.
+              Tu tienda de confianza para fundas de sillones, cortinas, sábanas y 
+              cubre acolchados de la mejor calidad. Transformamos hogares con 
+              elegancia y estilo.
             </p>
           </div>
 
           <div>
             <h4 className="font-semibold mb-4">Enlaces Rápidos</h4>
             <ul className="space-y-2 text-sm text-background/70">
+              <li>
+                <a
+                  href="#inicio"
+                  className="hover:text-background transition-colors"
+                >
+                  Inicio
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#sobre-nosotros"
+                  className="hover:text-background transition-colors"
+                >
+                  Sobre Nosotros
+                </a>
+              </li>
               <li>
                 <a
                   href="#fundas"
@@ -30,6 +47,14 @@ export function Footer() {
                   className="hover:text-background transition-colors"
                 >
                   Cortinas
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#sabanas"
+                  className="hover:text-background transition-colors"
+                >
+                  Sábanas
                 </a>
               </li>
             </ul>

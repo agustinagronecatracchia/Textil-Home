@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { ShoppingCart, Menu, X } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { Button } from "@/components/ui/button";
@@ -10,17 +10,18 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { CartDrawer } from "./CartDrawer";
+import { CartDrawer } from "@/components/CartDrawer";
 
 export function Navbar() {
-  const [location] = useLocation();
   const { totalItems } = useCart();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "/", label: "Inicio" },
-    { href: "/#fundas", label: "Fundas para Sillones" },
+    { href: "/#inicio", label: "Inicio" },
+    { href: "/#sobre-nosotros", label: "Sobre Nosotros" },
+    { href: "/#fundas", label: "Fundas" },
     { href: "/#cortinas", label: "Cortinas" },
+    { href: "/#sabanas", label: "Sábanas" },
   ];
 
   return (
@@ -33,7 +34,7 @@ export function Navbar() {
             </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
